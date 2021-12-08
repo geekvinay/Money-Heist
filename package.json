@@ -1,0 +1,16 @@
+{
+  "name": "money-heist",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.44.0",
+    "vite": "^2.7.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

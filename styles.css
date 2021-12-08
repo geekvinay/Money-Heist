@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Graduate&family=Montserrat:wght@400;600;700&family=Roboto&display=swap");
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+:root {
+  --primary-font: "Montserrat", sans-serif;
+  --heading-font: "Graduate", cursive;
+  --secondary-font: "Roboto", sans-serif;
+  --background-color: #000505;
+  --red-highlight: #db202c;
+  font-size: 62.5%;
+  color: white;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 1.6rem;
+  min-height: 100vh;
+  width: 100vw;
+  padding-left: 7vw;
+  padding-right: 7vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: #000505;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='214' height='214' viewBox='0 0 100 100'%3E%3Cg stroke='%23000505' stroke-width='0' stroke-opacity='0.5'%3E%3Crect fill='%231A1A1A' x='-60' y='-60' width='61' height='240'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+body nav.nav--hero {
+  width: 100%;
+  z-index: 2;
+  background-color: var(--background-color);
+  position: -webkit-sticky;
+  position: sticky;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body nav.nav--hero img.logo {
+  height: 50px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+body nav.nav--hero img.logo:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+body nav.nav--hero i {
+  font-size: 2rem;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+body nav.nav--hero i:hover {
+  cursor: pointer;
+  font-size: 2.1rem;
+}
+
+body nav.nav--hero ul {
+  padding: 0;
+  width: 30vw;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body nav.nav--hero li {
+  font-size: 1.5rem;
+}
+
+body nav.nav--hero li:hover {
+  cursor: pointer;
+}
+
+body nav.nav--hero hr {
+  border: none;
+  border-top: 2px solid #ffffff13;
+  border-radius: 2px;
+  top: 93px;
+  left: 0px;
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  position: absolute;
+}
+
+body div.page--one {
+  padding: 0px 5vw;
+  min-height: 100vh;
+}
+
+body div.page--one img.home--hero {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 85vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+  top: 100px;
+  right: 50px;
+  position: absolute;
+  text-shadow: -5px -5px 10px rgba(0, 0, 0, 0.493);
+}
+
+body div.page--one h1 {
+  right: 10px;
+  margin: 0;
+  font-weight: 900;
+  position: relative;
+  font-family: var(--heading-font);
+  font-size: 18rem;
+  letter-spacing: 7px;
+}
+
+body div.page--one #main {
+  -webkit-transform: scale(0.7) !important;
+          transform: scale(0.7) !important;
+  padding: 0px 20px;
+  display: inline;
+  background-color: var(--red-highlight);
+}
+
+body div.page--two {
+  width: 90%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  padding: 0 2vw;
+}
+
+body div.page--two img {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+body div.page--two section.page--right {
+  position: relative;
+  padding-top: 30px;
+}
+
+body div.page--two section.page--right h2 {
+  display: inline;
+  font-weight: 600;
+  margin-bottom: 0%;
+  letter-spacing: 1.4px;
+  font-family: var(--secondary-font);
+  font-size: 3rem;
+  color: var(--red-highlight);
+}
+
+body div.page--two section.page--right h2 span {
+  font-weight: 300;
+  margin: 0 25px;
+}
+
+body div.page--two section.page--right hr.vertical-hr {
+  border: none;
+  border-top: 3px solid rgba(255, 255, 255, 0.568);
+  width: 33px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  position: absolute;
+  top: 38px;
+  left: 100px;
+}
+
+body div.page--two section.page--right p {
+  font-weight: 300;
+  letter-spacing: 1.2px;
+  font-size: 1.7rem;
+  line-height: 30px;
+}
+
+body div.page--two section.page--right span {
+  color: rgba(255, 255, 255, 0.671);
+  margin-right: 10px;
+}
+
+body div.page--two section.page--right .list--villian {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body div.page--two section.page--right .list--villian i {
+  font-size: 4rem;
+  color: #f5c518;
+  padding: 0 10px;
+}
+
+body div.page--two section.page--right .list--villian hr {
+  margin: 0%;
+  padding: 0;
+  border: none;
+  border-top: 3px solid rgba(255, 255, 255, 0.568);
+  width: 33px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  border-top-width: 2px;
+  width: 20px;
+}
+
+body div.page--three {
+  width: 90%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  padding: 10vh 2vw;
+  position: relative;
+}
+
+body div.page--three h2 {
+  display: inline;
+  font-weight: 600;
+  margin-bottom: 0%;
+  letter-spacing: 1.4px;
+  font-family: var(--secondary-font);
+  font-size: 3rem;
+  color: var(--red-highlight);
+}
+
+body div.page--three h2 span {
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.671);
+  margin: 0 25px;
+}
+
+body div.page--three hr.vertical-hr {
+  border: none;
+  border-top: 3px solid rgba(255, 255, 255, 0.568);
+  width: 33px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  position: absolute;
+  top: 90px;
+  left: 138px;
+}
+
+p.sticker {
+  display: inline;
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  font-weight: 900;
+  background-color: #db0c2885;
+  padding: 5px 8px;
+  position: fixed;
+  top: 150px;
+  right: -50px;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+/*# sourceMappingURL=styles.css.map */
