@@ -267,6 +267,11 @@ body div.page--two section.page--right .list--villian hr {
   width: 20px;
 }
 
+body div.page--four section.page--right hr.vertical-hr {
+  position: absolute;
+  left: 150px;
+}
+
 body div.page--three {
   width: 90%;
   padding: 10vh 2vw;

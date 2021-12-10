@@ -225,6 +225,15 @@ body {
     }
   }
 
+  div.page--four {
+    section.page--right {
+      hr.vertical-hr {
+        position: absolute;
+        left: 150px;
+      }
+    }
+  }
+
   div.page--three {
     width: 90%;
     padding: 10vh 2vw;
