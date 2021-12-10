@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Graduate&family=Montserrat:wght@400;600;700&family=Roboto&display=swap");
 ::-webkit-scrollbar {
-  width: 0.8vw;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -355,7 +355,14 @@ body div.page--three section.video--list article {
 }
 
 body div.page--three section.video--list article img {
-  height: 40vh;
+  height: 25rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+body div.page--three section.video--list article img:hover {
+  cursor: pointer;
 }
 
 body div.page--three section.video--list article a {

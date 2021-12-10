@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Graduate&family=Montserrat:wght@400;600;700&family=Roboto&display=swap");
 
 ::-webkit-scrollbar {
-  width: 0.8vw;
+  width: 10px;
 }
 ::-webkit-scrollbar-track {
   background: #46464660;
@@ -286,7 +286,11 @@ body {
         flex-direction: column;
         justify-content: space-between;
         img {
-          height: 40vh;
+          height: 25rem;
+          width: fit-content;
+          &:hover {
+            cursor: pointer;
+          }
         }
         a {
           padding: 15px 0 10px 10px;
