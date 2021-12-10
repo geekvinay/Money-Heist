@@ -50,21 +50,7 @@ a:visited {
   color: white;
 }
 
-body {
-  font-family: var(--primary-font);
-  font-size: 1.6rem;
-  min-height: 100vh;
-  width: 100vw;
-  padding-left: 7vw;
-  padding-right: 7vw;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  overflow-x: hidden;
-  background-color: #000505;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='214' height='214' viewBox='0 0 100 100'%3E%3Cg stroke='%23000505' stroke-width='0' stroke-opacity='0.5'%3E%3Crect fill='%231A1A1A' x='-60' y='-60' width='61' height='240'/%3E%3C/g%3E%3C/svg%3E");
-}
-
-body nav.nav--hero {
+nav.nav--hero {
   width: 100%;
   z-index: 2;
   background-color: var(--background-color);
@@ -81,30 +67,30 @@ body nav.nav--hero {
           justify-content: space-between;
 }
 
-body nav.nav--hero img.logo {
+nav.nav--hero img.logo {
   height: 50px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-body nav.nav--hero img.logo:hover {
+nav.nav--hero img.logo:hover {
   cursor: pointer;
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
 }
 
-body nav.nav--hero i {
+nav.nav--hero i {
   font-size: 2rem;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 
-body nav.nav--hero i:hover {
+nav.nav--hero i:hover {
   cursor: pointer;
   font-size: 2.1rem;
 }
 
-body nav.nav--hero ul {
+nav.nav--hero ul {
   padding: 0;
   width: 30vw;
   list-style-type: none;
@@ -120,16 +106,16 @@ body nav.nav--hero ul {
           justify-content: space-between;
 }
 
-body nav.nav--hero li {
+nav.nav--hero li {
   font-weight: 500;
   font-size: 1.5rem;
 }
 
-body nav.nav--hero li:hover {
+nav.nav--hero li:hover {
   cursor: pointer;
 }
 
-body nav.nav--hero hr {
+nav.nav--hero hr {
   border: none;
   border-top: 2px solid #ffffff13;
   border-radius: 2px;
@@ -141,9 +127,27 @@ body nav.nav--hero hr {
   position: absolute;
 }
 
+body {
+  font-family: var(--primary-font);
+  font-size: 1.6rem;
+  min-height: 100vh;
+  width: 100vw;
+  padding-left: 7vw;
+  padding-right: 7vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #000505;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='214' height='214' viewBox='0 0 100 100'%3E%3Cg stroke='%23000505' stroke-width='0' stroke-opacity='0.5'%3E%3Crect fill='%231A1A1A' x='-60' y='-60' width='61' height='240'/%3E%3C/g%3E%3C/svg%3E");
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+
 body div.page--one {
   padding: 0px 5vw;
   min-height: 100vh;
+  scroll-snap-align: start;
 }
 
 body div.page--one img.home--hero {
@@ -178,6 +182,7 @@ body div.page--one #main {
 }
 
 body div.page--two {
+  scroll-snap-align: start;
   width: 90%;
   display: -ms-grid;
   display: grid;
@@ -267,12 +272,17 @@ body div.page--two section.page--right .list--villian hr {
   width: 20px;
 }
 
+body div.page--four {
+  scroll-snap-align: start;
+}
+
 body div.page--four section.page--right hr.vertical-hr {
   position: absolute;
   left: 150px;
 }
 
 body div.page--three {
+  scroll-snap-align: start;
   width: 90%;
   padding: 10vh 2vw;
   position: relative;
@@ -315,6 +325,9 @@ body div.page--three section.video--list {
           flex-direction: row;
   width: 100%;
   overflow-x: auto;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 }
 
 body div.page--three section.video--list::-webkit-scrollbar {
@@ -357,17 +370,16 @@ body div.page--three section.video--list article {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  scroll-snap-align: start;
 }
 
 body div.page--three section.video--list article img {
   height: 25rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 
 body div.page--three section.video--list article img:hover {
-  cursor: pointer;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
 body div.page--three section.video--list article a {
