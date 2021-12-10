@@ -1,4 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Graduate&family=Montserrat:wght@400;600;700&family=Roboto&display=swap");
+::-webkit-scrollbar {
+  width: 0.8vw;
+}
+
+::-webkit-scrollbar-track {
+  background: #46464660;
+  border-radius: 10px;
+  margin-block: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #db202cda;
+  border-radius: 10px;
+  width: 10px;
+  background: red;
+  border: 1.5px rgba(255, 255, 255, 0) solid;
+  background-clip: padding-box;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -15,6 +34,19 @@
   --background-color: #000505;
   --red-highlight: #db202c;
   font-size: 62.5%;
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:focus {
+  color: white;
+}
+
+a:visited {
   color: white;
 }
 
@@ -89,6 +121,7 @@ body nav.nav--hero ul {
 }
 
 body nav.nav--hero li {
+  font-weight: 500;
   font-size: 1.5rem;
 }
 
@@ -236,18 +269,11 @@ body div.page--two section.page--right .list--villian hr {
 
 body div.page--three {
   width: 90%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
   padding: 10vh 2vw;
   position: relative;
 }
 
 body div.page--three h2 {
-  display: inline;
   font-weight: 600;
   margin-bottom: 0%;
   letter-spacing: 1.4px;
@@ -273,17 +299,84 @@ body div.page--three hr.vertical-hr {
   left: 138px;
 }
 
+body div.page--three section.video--list {
+  padding-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  overflow-x: auto;
+}
+
+body div.page--three section.video--list::-webkit-scrollbar {
+  height: 15px;
+}
+
+body div.page--three section.video--list::-webkit-scrollbar-thumb {
+  border: 2px solid rgba(0, 0, 255, 0);
+}
+
+body div.page--three section.video--list::-webkit-scrollbar-track {
+  -webkit-margin-end: 60vw;
+          margin-inline-end: 60vw;
+  -webkit-margin-start: 2vw;
+          margin-inline-start: 2vw;
+}
+
+body div.page--three section.video--list::after {
+  content: "";
+  height: 100%;
+  width: 30%;
+  display: block;
+  position: absolute;
+  right: -10%;
+  background-color: #000505;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 5, 5, 0)), color-stop(61%, #000505), to(#000505));
+  background: linear-gradient(90deg, rgba(0, 5, 5, 0) 0%, #000505 61%, #000505 100%);
+}
+
+body div.page--three section.video--list article {
+  height: 100%;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body div.page--three section.video--list article img {
+  height: 40vh;
+}
+
+body div.page--three section.video--list article a {
+  padding: 15px 0 10px 10px;
+  font-family: var(--primary-font);
+  font-size: 1.6rem;
+  font-size: 1.6rem;
+}
+
 p.sticker {
   display: inline;
   font-family: var(--heading-font);
   font-size: 2rem;
   font-weight: 900;
-  background-color: #db0c2885;
+  background-color: #a30a1ffd;
   padding: 5px 8px;
   position: fixed;
   top: 150px;
   right: -50px;
   -webkit-transform: rotate(270deg);
           transform: rotate(270deg);
+  z-index: 5;
 }
 /*# sourceMappingURL=styles.css.map */
