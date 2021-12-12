@@ -1,6 +1,7 @@
 //  IMPORTING ALL FILES REQUIRED
 @import url("https://fonts.googleapis.com/css2?family=Graduate&family=Montserrat:wght@400;600;700&family=Roboto&display=swap");
 
+// Modifying the scroll bar to the theme
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -18,15 +19,18 @@
   background-clip: padding-box;
 }
 
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+::-moz-selection {
+  /* Code for Firefox */
+  color: #fff;
+  background: var(--red-highlight);
+}
+::selection {
+  font-weight: bolder;
+  color: #fff;
+  background: var(--red-highlight);
 }
 
+// CSS Variables
 :root {
   --primary-font: "Montserrat", sans-serif;
   --heading-font: "Graduate", cursive;
@@ -37,11 +41,11 @@
   color: white;
 }
 
+// Mixins for general components
 @mixin primary-text {
   font-family: var(--primary-font);
   font-size: 1.6rem;
 }
-
 @mixin vertical-hr {
   border: none;
   border-top: 3px solid rgba(255, 255, 255, 0.568);
@@ -49,6 +53,7 @@
   transform: rotate(90deg);
 }
 
+// Styling the links at a single place
 a {
   color: white;
   text-decoration: none;
@@ -66,6 +71,7 @@ nav.nav--hero {
   z-index: 2;
   background-color: var(--background-color);
   position: sticky;
+  box-sizing: border-box;
   padding-top: 30px;
   padding-bottom: 20px;
   display: flex;
@@ -79,17 +85,17 @@ nav.nav--hero {
       transform: scale(1.03);
     }
   }
-  i {
-    font-size: 2rem;
-    transition: all 0.4s ease;
-    &:hover {
-      cursor: pointer;
-      font-size: 2.1rem;
-    }
-  }
+  // i {
+  //   font-size: 2rem;
+  //   transition: all 0.4s ease;
+  //   &:hover {
+  //     cursor: pointer;
+  //     font-size: 3.1rem;
+  //   }
+  // }
   ul {
     padding: 0;
-    width: 30vw;
+    width: 30%;
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -116,7 +122,7 @@ nav.nav--hero {
 
 body {
   @include primary-text();
-  min-height: 100vh;
+  height: 100%;
   width: 100vw;
   padding-left: 7vw;
   padding-right: 7vw;
@@ -126,31 +132,35 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  // ############## Page 1 ##############
   div.page--one {
+    width: 100%;
     padding: 0px 5vw;
     min-height: 100vh;
     scroll-snap-align: start;
-
-    // Other Elements in the page one
+    // Components/Elements in the page one
 
     // Image
     img.home--hero {
       width: fit-content;
-      height: 85vh;
+      height: 48rem;
       object-fit: contain;
-      top: 100px;
-      right: 50px;
+      top: 80px;
+      right: 100px;
       position: absolute;
       text-shadow: -5px -5px 10px rgba(0, 0, 0, 0.493);
     }
     h1 {
-      right: 10px;
+      left: 50px;
       margin: 0;
       font-weight: 900;
       position: relative;
       font-family: var(--heading-font);
-      font-size: 18rem;
+      font-size: 17.5rem;
       letter-spacing: 7px;
     }
     #main {
@@ -161,7 +171,7 @@ body {
     }
   }
 
-  // ###################### Page Two
+  // ############## Page Two
   div.page--two {
     scroll-snap-align: start;
     width: 90%;
@@ -188,21 +198,18 @@ body {
           margin: 0 25px;
         }
       }
-
       hr.vertical-hr {
         @include vertical-hr();
         position: absolute;
         top: 38px;
         left: 100px;
       }
-
       p {
         font-weight: 300;
         letter-spacing: 1.2px;
         font-size: 1.7rem;
         line-height: 30px;
       }
-
       span {
         color: rgba(255, 255, 255, 0.671);
         margin-right: 10px;
@@ -217,7 +224,6 @@ body {
           color: #f5c518;
           padding: 0 10px;
         }
-
         hr {
           margin: 0%;
           padding: 0;
@@ -229,18 +235,9 @@ body {
     }
   }
 
-  div.page--four {
-    scroll-snap-align: start;
-
-    section.page--right {
-      hr.vertical-hr {
-        position: absolute;
-        left: 150px;
-      }
-    }
-  }
-
-  div.page--three {
+  // ########### PAGE 3 ###################
+  div.page--three,
+  div.page--six {
     scroll-snap-align: start;
 
     width: 90%;
@@ -296,7 +293,7 @@ body {
       flex-direction: row;
       width: 100%;
       overflow-x: auto;
-      scroll-snap-type: x mandatory;
+      scroll-snap-type: x proximity;
       scroll-behavior: smooth;
       article {
         height: 100%;
@@ -319,7 +316,145 @@ body {
       }
     }
   }
+
+  div.page--four {
+    scroll-snap-align: start;
+
+    section.page--right {
+      hr.vertical-hr {
+        position: absolute;
+        left: 150px;
+      }
+    }
+  }
+
+  section.divider--hero {
+    width: 87%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #151616b2;
+    backdrop-filter: blur(2px);
+    padding: 0 25px;
+    margin: 100px 0;
+
+    img {
+      height: 30px;
+    }
+    button {
+      background-color: #db202c;
+      color: #fff;
+      border: none;
+      padding: 8px 20px;
+    }
+  }
+
+  // ########### PAGE 5 ###################
+  div.page--five {
+    scroll-snap-align: start;
+    width: 90%;
+    padding: 10vh 2vw;
+    position: relative;
+    h2 {
+      font-weight: 600;
+      margin-bottom: 0%;
+      letter-spacing: 1.4px;
+      font-family: var(--secondary-font);
+      font-size: 3rem;
+      color: var(--red-highlight);
+      span {
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.671);
+        margin: 0 25px;
+      }
+    }
+    hr.vertical-hr {
+      @include vertical-hr();
+      position: absolute;
+      top: 90px;
+      left: 138px;
+    }
+    section.video--list {
+      &::-webkit-scrollbar {
+        height: 15px;
+      }
+      &::-webkit-scrollbar-thumb {
+        border: 2px solid rgba(0, 0, 255, 0);
+      }
+      &::-webkit-scrollbar-track {
+        margin-inline-end: 60vw;
+        margin-inline-start: 2vw;
+      }
+      &::after {
+        content: "";
+        height: 100%;
+        width: 30%;
+        display: block;
+        position: absolute;
+        right: -10%;
+        background-color: #000505;
+        background: linear-gradient(
+          90deg,
+          rgba(0, 5, 5, 0) 0%,
+          rgba(0, 5, 5, 1) 61%,
+          rgba(0, 5, 5, 1) 100%
+        );
+      }
+      padding-top: 25px;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      overflow-x: auto;
+      scroll-snap-type: x proximity;
+      scroll-behavior: smooth;
+      article {
+        height: 100%;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        scroll-snap-align: start;
+        img {
+          height: 40rem;
+          height: 40rem;
+          filter: saturate(2);
+          &:hover {
+            cursor: grab;
+          }
+        }
+        a {
+          padding: 15px 0 10px 10px;
+          @include primary-text();
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+
+  // ############# Uncommon properties for page six
+  div.page--six {
+    hr.vertical-hr {
+      @include vertical-hr();
+      left: 167px;
+    }
+    section.video--list {
+      article {
+        a {
+          color: var(--red-highlight);
+          font-size: 3rem;
+          font-weight: 600;
+        }
+        p {
+          @include primary-text();
+          padding: 0 10px;
+        }
+      }
+    }
+  }
 }
+
 // Bella Ciao Tag
 p.sticker {
   display: inline;
