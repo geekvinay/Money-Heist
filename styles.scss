@@ -1,6 +1,7 @@
 //  IMPORTING ALL FILES REQUIRED
 @import url("https://fonts.googleapis.com/css2?family=Graduate&family=Montserrat:wght@400;600;700&family=Roboto&display=swap");
 
+
 // Modifying the scroll bar to the theme
 ::-webkit-scrollbar {
   width: 10px;
@@ -39,6 +40,9 @@
   --red-highlight: #db202c;
   font-size: 62.5%;
   color: white;
+  img{
+    
+  }
 }
 
 // Mixins for general components
@@ -338,7 +342,7 @@ body {
     background-color: #151616b2;
     backdrop-filter: blur(2px);
     padding: 0 25px;
-    margin: 100px 0;
+    margin: 50px 0;
 
     img {
       height: 30px;

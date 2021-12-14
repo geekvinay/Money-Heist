@@ -427,7 +427,7 @@ body section.divider--hero {
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
   padding: 0 25px;
-  margin: 100px 0;
+  margin: 50px 0;
 }
 
 body section.divider--hero img {
