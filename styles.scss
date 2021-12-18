@@ -1,7 +1,6 @@
 //  IMPORTING ALL FILES REQUIRED
 @import url("https://fonts.googleapis.com/css2?family=Graduate&family=Montserrat:wght@400;600;700&family=Roboto&display=swap");
 
-
 // Modifying the scroll bar to the theme
 ::-webkit-scrollbar {
   width: 10px;
@@ -40,9 +39,6 @@
   --red-highlight: #db202c;
   font-size: 62.5%;
   color: white;
-  img{
-    
-  }
 }
 
 // Mixins for general components
@@ -55,6 +51,16 @@
   border-top: 3px solid rgba(255, 255, 255, 0.568);
   width: 33px;
   transform: rotate(90deg);
+}
+
+@mixin heading {
+  display: inline;
+  font-weight: 600;
+  margin-bottom: 0%;
+  letter-spacing: 1.4px;
+  font-family: var(--secondary-font);
+  font-size: 3rem;
+  color: var(--red-highlight);
 }
 
 // Styling the links at a single place
@@ -71,11 +77,12 @@ a {
 
 // Navigation bar
 nav.nav--hero {
-  width: 100%;
+  width: 100vw;
   z-index: 2;
   background-color: var(--background-color);
   position: sticky;
   box-sizing: border-box;
+  padding: 0 5vw;
   padding-top: 30px;
   padding-bottom: 20px;
   display: flex;
@@ -89,14 +96,6 @@ nav.nav--hero {
       transform: scale(1.03);
     }
   }
-  // i {
-  //   font-size: 2rem;
-  //   transition: all 0.4s ease;
-  //   &:hover {
-  //     cursor: pointer;
-  //     font-size: 3.1rem;
-  //   }
-  // }
   ul {
     padding: 0;
     width: 30%;
@@ -106,8 +105,8 @@ nav.nav--hero {
     justify-content: space-between;
   }
   li {
-    font-weight: 500;
-    font-size: 1.5rem;
+    font-weight: 600;
+    font-size: 1.3rem;
     &:hover {
       cursor: pointer;
     }
@@ -190,13 +189,8 @@ body {
       position: relative;
       padding-top: 30px;
       h2 {
-        display: inline;
-        font-weight: 600;
-        margin-bottom: 0%;
-        letter-spacing: 1.4px;
-        font-family: var(--secondary-font);
-        font-size: 3rem;
-        color: var(--red-highlight);
+        @include heading();
+        padding: 0;
         span {
           font-weight: 300;
           margin: 0 25px;
@@ -455,6 +449,108 @@ body {
           padding: 0 10px;
         }
       }
+    }
+  }
+
+  // ####################################################
+  //  Change the headings h2 for every page
+  // ####################################################
+  div.page--seven {
+    width: 90%;
+    padding: 10vh 2vw;
+    position: relative;
+    display: columns;
+    flex-direction: row;
+    justify-content: space-between;
+    h2 {
+      @include heading();
+      position: relative;
+      width: 100%;
+      span {
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.671);
+      }
+    }
+    h3 {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    div.wrapper--flex {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 30px 0;
+    }
+    section.subpage--left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+    section.subpage--right {
+      p {
+        opacity: 0.7;
+      }
+    }
+    div.cast--list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      li {
+        opacity: 0.7;
+        padding: 10px 20px 0 0;
+        list-style-type: none;
+      }
+    }
+  }
+
+  // Footer
+  div.footer--hero {
+    min-height: 70vh;
+    width: 100vw;
+    background-color: #24231e78;
+    backdrop-filter: blur(2px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0.8;
+
+    div.social--handles {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      // width: 45vw;
+      font-size: 3rem;
+      i {
+        padding: 30px 40px;
+        opacity: 0.6;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    div.links--inline1,
+    div.links--inline2 {
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 50vw;
+      li {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    div.links--inline1 {
+      padding-top: 40px;
+      width: 80vw;
+    }
+    div.few--words {
+      width: 30%;
+      line-height: 30px;
+      text-align: center;
     }
   }
 }

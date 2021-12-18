@@ -54,13 +54,14 @@ a:visited {
 }
 
 nav.nav--hero {
-  width: 100%;
+  width: 100vw;
   z-index: 2;
   background-color: var(--background-color);
   position: -webkit-sticky;
   position: sticky;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  padding: 0 5vw;
   padding-top: 30px;
   padding-bottom: 20px;
   display: -webkit-box;
@@ -101,8 +102,8 @@ nav.nav--hero ul {
 }
 
 nav.nav--hero li {
-  font-weight: 500;
-  font-size: 1.5rem;
+  font-weight: 600;
+  font-size: 1.3rem;
 }
 
 nav.nav--hero li:hover {
@@ -216,6 +217,7 @@ body div.page--two section.page--right h2 {
   font-family: var(--secondary-font);
   font-size: 3rem;
   color: var(--red-highlight);
+  padding: 0;
 }
 
 body div.page--two section.page--right h2 span {
@@ -571,6 +573,168 @@ body div.page--six section.video--list article p {
   font-family: var(--primary-font);
   font-size: 1.6rem;
   padding: 0 10px;
+}
+
+body div.page--seven {
+  width: 90%;
+  padding: 10vh 2vw;
+  position: relative;
+  display: columns;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body div.page--seven h2 {
+  display: inline;
+  font-weight: 600;
+  margin-bottom: 0%;
+  letter-spacing: 1.4px;
+  font-family: var(--secondary-font);
+  font-size: 3rem;
+  color: var(--red-highlight);
+  position: relative;
+  width: 100%;
+}
+
+body div.page--seven h2 span {
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.671);
+}
+
+body div.page--seven h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+body div.page--seven div.wrapper--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 30px 0;
+}
+
+body div.page--seven section.subpage--left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body div.page--seven section.subpage--right p {
+  opacity: 0.7;
+}
+
+body div.page--seven div.cast--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body div.page--seven div.cast--list li {
+  opacity: 0.7;
+  padding: 10px 20px 0 0;
+  list-style-type: none;
+}
+
+body div.footer--hero {
+  min-height: 70vh;
+  width: 100vw;
+  background-color: #24231e78;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0.8;
+}
+
+body div.footer--hero div.social--handles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-size: 3rem;
+}
+
+body div.footer--hero div.social--handles i {
+  padding: 30px 40px;
+  opacity: 0.6;
+}
+
+body div.footer--hero div.social--handles i:hover {
+  cursor: pointer;
+}
+
+body div.footer--hero div.links--inline1,
+body div.footer--hero div.links--inline2 {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 50vw;
+}
+
+body div.footer--hero div.links--inline1 li:hover,
+body div.footer--hero div.links--inline2 li:hover {
+  cursor: pointer;
+}
+
+body div.footer--hero div.links--inline1 {
+  padding-top: 40px;
+  width: 80vw;
+}
+
+body div.footer--hero div.few--words {
+  width: 30%;
+  line-height: 30px;
+  text-align: center;
 }
 
 p.sticker {
