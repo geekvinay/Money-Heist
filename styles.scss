@@ -78,6 +78,7 @@ a {
 // Navigation bar
 nav.nav--hero {
   width: 100vw;
+  height: 100px;
   z-index: 2;
   background-color: var(--background-color);
   position: sticky;
@@ -121,6 +122,9 @@ nav.nav--hero {
     width: 100%;
     position: absolute;
   }
+  i {
+    display: none;
+  }
 }
 
 body {
@@ -145,8 +149,9 @@ body {
     padding: 0px 5vw;
     min-height: 100vh;
     scroll-snap-align: start;
+    position: relative;
+    top: -100px;
     // Components/Elements in the page one
-
     // Image
     img.home--hero {
       width: fit-content;
@@ -162,6 +167,7 @@ body {
       margin: 0;
       font-weight: 900;
       position: relative;
+      top: 100px;
       font-family: var(--heading-font);
       font-size: 17.5rem;
       letter-spacing: 7px;
@@ -568,4 +574,34 @@ p.sticker {
   right: -50px;
   transform: rotate(270deg);
   z-index: 5;
+}
+
+// Responsive code
+
+@media screen and (max-width: 600px) {
+  // Navigation pane
+  nav.nav--hero {
+    ul.right--list,
+    ul.left--list {
+      display: none;
+      opacity: 0;
+    }
+    a,
+    i {
+      display: block;
+      font-size: 3rem;
+      align-self: center;
+    }
+  }
+
+  body {
+    div.page--one {
+      img.home--hero {
+        display: none;
+      }
+      h1 {
+        font-size: 20vw;
+      }
+    }
+  }
 }
