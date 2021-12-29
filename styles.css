@@ -154,6 +154,35 @@ body {
           align-items: center;
 }
 
+body section.mobile--message {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background-color: #000505;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+body section.mobile--message p {
+  font-family: var(--primary-font);
+  font-size: 1.6rem;
+  font-size: 2.5rem;
+  width: 50vw;
+  text-align: center;
+}
+
 body section.loading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -175,13 +204,71 @@ body section.loading {
   width: 100vw;
   background-color: #000505;
   z-index: 100;
-  -webkit-transition: opacity 1.5s ease;
-  transition: opacity 1.5s ease;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
 }
 
-body section.loading p.mobile-message {
-  display: none;
-  opacity: 0;
+body section.loading img {
+  height: 70px;
+  margin-bottom: 30px;
+  -webkit-animation-name: loader--blink;
+          animation-name: loader--blink;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes loader--blink {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes loader--blink {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 body section.loading div.loading--bar {
@@ -868,8 +955,48 @@ p.sticker {
 }
 
 @media screen and (max-width: 900px) {
-  section.loading {
-    opacity: 1;
+  body {
+    overflow-y: hidden;
   }
+  body section.mobile--message {
+    opacity: 1;
+    pointer-events: fill;
+  }
+}
+
+i.fa-instagram {
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+i.fa-instagram:hover {
+  color: #f75c4d;
+}
+
+i.fa-facebook {
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+i.fa-facebook:hover {
+  color: #023dff;
+}
+
+i.fa-instagram {
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+i.fa-instagram:hover {
+  color: #f75c4d;
+}
+
+i.fa-instagram {
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+i.fa-instagram:hover {
+  color: #f75c4d;
 }
 /*# sourceMappingURL=styles.css.map */
