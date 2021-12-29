@@ -137,11 +137,60 @@ body {
   background-color: #000505;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='214' height='214' viewBox='0 0 100 100'%3E%3Cg stroke='%23000505' stroke-width='0' stroke-opacity='0.5'%3E%3Crect fill='%231A1A1A' x='-60' y='-60' width='61' height='240'/%3E%3C/g%3E%3C/svg%3E");
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: hidden;
   scroll-snap-type: y mandatory;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  // ############## Loading screen ######
+  section.loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000505;
+    z-index: 100;
+    transition: opacity 1.5s ease;
+    p.mobile-message {
+      display: none;
+      opacity: 0;
+    }
+    div.loading--bar {
+      border: 2px solid #fff;
+      height: 15px;
+      width: 200px;
+      div.loading--inside {
+        height: 15px;
+        width: 0px;
+        background-color: #db202c;
+        animation-name: loading--animation;
+        animation-duration: 4s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+  @keyframes loading--animation {
+    0% {
+      width: 0px;
+    }
+    25% {
+      width: 50px;
+    }
+    50% {
+      width: 150px;
+    }
+    100% {
+      width: 200px;
+    }
+  }
 
   // ############## Page 1 ##############
   div.page--one {
@@ -151,8 +200,6 @@ body {
     scroll-snap-align: start;
     position: relative;
     top: -100px;
-    // Components/Elements in the page one
-    // Image
     img.home--hero {
       width: fit-content;
       height: 48rem;
@@ -589,8 +636,11 @@ p.sticker {
     a,
     i {
       display: block;
-      font-size: 3rem;
+      font-size: 7vw;
       align-self: center;
+    }
+    img.logo {
+      height: 10vw;
     }
   }
 
@@ -603,5 +653,11 @@ p.sticker {
         font-size: 20vw;
       }
     }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  section.loading {
+    opacity: 1;
   }
 }
