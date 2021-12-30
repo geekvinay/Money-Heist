@@ -4,10 +4,8 @@ This is a fan website of the most popular show on Netflix 😉, Money heist. A c
 
 ##About
 
-<h1 align="center">Hey there 👋, I'm Vinay Kishore</h1>
-<h3 align="center">A passionate frontend developer, Designer from India</h3>
-
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=geekvinay&label=Profile%20views&color=0e75b6&style=flat" alt="geekvinay" /> </p>
+<h1 align="left">Hey there 👋, I'm Vinay Kishore</h1>
+<h3 align="left">A passionate frontend developer, Designer from India</h3>
 
 <p align="left"> <a href="https://twitter.com/_vinaykishore" target="blank"><img src="https://img.shields.io/twitter/follow/_vinaykishore?logo=twitter&style=for-the-badge" alt="_vinaykishore" /></a> </p>
 
