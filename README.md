@@ -2,9 +2,9 @@
 
 This is a fan website of the most popular show on Netflix 😉, Money heist. A criminal mastermind who goes by "The Professor" has a plan to pull off the biggest heist in recorded history -- to print billions of euros in the Royal Mint of Spain. To help him carry out the ambitious plan, he recruits eight people with certain abilities and who have nothing to lose. The group of thieves takes hostages to aid in their negotiations with the authorities, who strategize to come up with a way to capture The Professor. As more time elapses, the robbers prepare for a showdown with the police.
 
-<h1 align="left">About</h1>
+##About Me
 
-<h1 align="left">Hey there 👋, I'm Vinay Kishore</h1>
+<h2 align="left">Hey there 👋, I'm Vinay Kishore</h2>
 <h3 align="left">A passionate frontend developer, Designer from India</h3>
 
 <p align="left"> <a href="https://twitter.com/_vinaykishore" target="blank"><img src="https://img.shields.io/twitter/follow/_vinaykishore?logo=twitter&style=for-the-badge" alt="_vinaykishore" /></a> </p>
