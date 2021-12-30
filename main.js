@@ -29,6 +29,8 @@ window.addEventListener('load', () => {
 
 
         if (screenwidth < 800) {
+            body.style.width = "100vw";
+            body.style.height = "100vh";
             body.style.overflowY = "hidden";
         }
         else

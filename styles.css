@@ -1016,30 +1016,32 @@ i.fa-instagram:hover {
   color: #f75c4d;
 }
 
-i.fa-facebook {
+i.fa-facebook,
+i.fa-twitter {
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
 
-i.fa-facebook:hover {
+i.fa-facebook:hover,
+i.fa-twitter:hover {
   color: #023dff;
 }
 
-i.fa-instagram {
+i.fa-twitch {
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
 
-i.fa-instagram:hover {
-  color: #f75c4d;
+i.fa-twitch:hover {
+  color: violet;
 }
 
-i.fa-instagram {
+i.fa-youtube {
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
 
-i.fa-instagram:hover {
-  color: #f75c4d;
+i.fa-youtube:hover {
+  color: red;
 }
 /*# sourceMappingURL=styles.css.map */
