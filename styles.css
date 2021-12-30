@@ -38,6 +38,7 @@
   --red-highlight: #db202c;
   font-size: 62.5%;
   color: white;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -69,9 +70,10 @@ nav.nav--hero {
   display: -ms-flexbox;
   display: flex;
   top: 0px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.397);
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.397);
 }
 
 nav.nav--hero img.logo {
@@ -102,12 +104,12 @@ nav.nav--hero ul {
           justify-content: space-between;
 }
 
-nav.nav--hero li {
+nav.nav--hero a {
   font-weight: 600;
   font-size: 1.3rem;
 }
 
-nav.nav--hero li:hover {
+nav.nav--hero a:hover {
   cursor: pointer;
 }
 
@@ -125,6 +127,10 @@ nav.nav--hero hr {
 
 nav.nav--hero i {
   display: none;
+}
+
+body.overflow--scroll {
+  overflow: scroll;
 }
 
 body {
@@ -152,6 +158,99 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+body section.review--hero {
+  position: fixed;
+  margin: 100px auto;
+  z-index: 3;
+  height: 400px;
+  min-width: 60vw;
+  border: 2px solid rgba(255, 255, 255, 0.432);
+  background-color: #000505ea;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+body section.review--hero h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+body section.review--hero form {
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body section.review--hero form input {
+  margin: 3px 100px;
+  height: 24px;
+  font-size: 16px;
+  padding: 0 10px;
+}
+
+body section.review--hero form textarea {
+  margin: 0 100px;
+  text-align: left;
+  padding: 8px 10px;
+}
+
+body section.review--hero form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body section.review--hero form input.buttons {
+  margin: 5px 120px;
+  height: 40px;
+  padding: 10px 120px;
+  background-color: #db202c;
+  color: white;
+  border: none;
+  font-size: 2rem;
+}
+
+body section.review--hero form input.buttons:hover {
+  cursor: pointer;
+}
+
+body section.review--hero i {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 3rem;
+  position: absolute;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 10px 20px;
+}
+
+body section.review--hero i:hover {
+  cursor: pointer;
 }
 
 body section.mobile--message {
@@ -198,6 +297,7 @@ body section.loading {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
+  pointer-events: none;
   top: 0;
   left: 0;
   height: 100vh;
@@ -244,6 +344,7 @@ body section.loading img {
   }
   100% {
     opacity: 1;
+    display: none;
   }
 }
 
@@ -268,6 +369,7 @@ body section.loading img {
   }
   100% {
     opacity: 1;
+    display: none;
   }
 }
 
@@ -374,6 +476,7 @@ body div.page--two {
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
   padding: 0 2vw;
+  padding-top: 9rem;
 }
 
 body div.page--two img {
@@ -399,18 +502,6 @@ body div.page--two section.page--right h2 {
 
 body div.page--two section.page--right h2 span {
   font-weight: 300;
-  margin: 0 25px;
-}
-
-body div.page--two section.page--right hr.vertical-hr {
-  border: none;
-  border-top: 3px solid rgba(255, 255, 255, 0.568);
-  width: 33px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  position: absolute;
-  top: 38px;
-  left: 100px;
 }
 
 body div.page--two section.page--right p {
@@ -444,23 +535,12 @@ body div.page--two section.page--right .list--villian i {
   padding: 0 10px;
 }
 
-body div.page--two section.page--right .list--villian hr {
-  margin: 0%;
-  padding: 0;
-  border: none;
-  border-top: 3px solid rgba(255, 255, 255, 0.568);
-  width: 33px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  border-top-width: 2px;
-  width: 20px;
-}
-
 body div.page--three,
 body div.page--six {
   scroll-snap-align: start;
   width: 90%;
   padding: 10vh 2vw;
+  padding-top: 10rem;
   position: relative;
 }
 
@@ -478,19 +558,6 @@ body div.page--three h2 span,
 body div.page--six h2 span {
   font-weight: 300;
   color: rgba(255, 255, 255, 0.671);
-  margin: 0 25px;
-}
-
-body div.page--three hr.vertical-hr,
-body div.page--six hr.vertical-hr {
-  border: none;
-  border-top: 3px solid rgba(255, 255, 255, 0.568);
-  width: 33px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  position: absolute;
-  top: 90px;
-  left: 138px;
 }
 
 body div.page--three section.video--list,
@@ -579,11 +646,7 @@ body div.page--six section.video--list article a {
 
 body div.page--four {
   scroll-snap-align: start;
-}
-
-body div.page--four section.page--right hr.vertical-hr {
-  position: absolute;
-  left: 150px;
+  padding-top: 10rem;
 }
 
 body section.divider--hero {
@@ -624,6 +687,7 @@ body div.page--five {
   scroll-snap-align: start;
   width: 90%;
   padding: 10vh 2vw;
+  padding-top: 10rem;
   position: relative;
 }
 
@@ -639,18 +703,6 @@ body div.page--five h2 {
 body div.page--five h2 span {
   font-weight: 300;
   color: rgba(255, 255, 255, 0.671);
-  margin: 0 25px;
-}
-
-body div.page--five hr.vertical-hr {
-  border: none;
-  border-top: 3px solid rgba(255, 255, 255, 0.568);
-  width: 33px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  position: absolute;
-  top: 90px;
-  left: 138px;
 }
 
 body div.page--five section.video--list {
@@ -729,15 +781,6 @@ body div.page--five section.video--list article a {
   font-family: var(--primary-font);
   font-size: 1.6rem;
   font-size: 1.6rem;
-}
-
-body div.page--six hr.vertical-hr {
-  border: none;
-  border-top: 3px solid rgba(255, 255, 255, 0.568);
-  width: 33px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  left: 167px;
 }
 
 body div.page--six section.video--list article a {

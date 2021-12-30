@@ -39,6 +39,7 @@
   --red-highlight: #db202c;
   font-size: 62.5%;
   color: white;
+  scroll-behavior: smooth;
 }
 
 // Mixins for general components
@@ -88,7 +89,8 @@ nav.nav--hero {
   padding-bottom: 20px;
   display: flex;
   top: 0px;
-  justify-content: space-between;
+  justify-content: space-around;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.397);
   img.logo {
     height: 50px;
     transition: all 0.5s ease;
@@ -105,7 +107,7 @@ nav.nav--hero {
     flex-direction: row;
     justify-content: space-between;
   }
-  li {
+  a {
     font-weight: 600;
     font-size: 1.3rem;
     &:hover {
@@ -127,6 +129,10 @@ nav.nav--hero {
   }
 }
 
+body.overflow--scroll {
+  overflow: scroll;
+}
+
 body {
   @include primary-text();
   height: 100%;
@@ -142,6 +148,72 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  section.review--hero {
+    position: fixed;
+    margin: 100px auto;
+    z-index: 3;
+    height: 400px;
+    min-width: 60vw;
+    border: 2px solid rgba(255, 255, 255, 0.432);
+    background-color: #000505ea;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1s ease;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 500;
+      text-align: center;
+    }
+    form {
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      input {
+        margin: 3px 100px;
+        height: 24px;
+        font-size: 16px;
+        padding: 0 10px;
+      }
+      textarea {
+        margin: 0 100px;
+        text-align: left;
+        padding: 8px 10px;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+      }
+      input.buttons {
+        margin: 5px 120px;
+        height: 40px;
+        padding: 10px 120px;
+        background-color: #db202c;
+        color: white;
+        border: none;
+        font-size: 2rem;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    i {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 3rem;
+      position: absolute;
+      align-self: flex-end;
+      margin: 10px 20px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
 
   // ############## Error for small screens
   section.mobile--message {
@@ -172,6 +244,7 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
+    pointer-events: none;
     top: 0;
     left: 0;
     height: 100vh;
@@ -209,6 +282,7 @@ body {
       }
       100% {
         opacity: 1;
+        display: none;
       }
     }
     div.loading--bar {
@@ -285,6 +359,7 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     padding: 0 2vw;
+    padding-top: 9rem;
     img {
       transform: scale(0.9);
     }
@@ -296,14 +371,7 @@ body {
         padding: 0;
         span {
           font-weight: 300;
-          margin: 0 25px;
         }
-      }
-      hr.vertical-hr {
-        @include vertical-hr();
-        position: absolute;
-        top: 38px;
-        left: 100px;
       }
       p {
         font-weight: 300;
@@ -325,13 +393,6 @@ body {
           color: #f5c518;
           padding: 0 10px;
         }
-        hr {
-          margin: 0%;
-          padding: 0;
-          @include vertical-hr();
-          border-top-width: 2px;
-          width: 20px;
-        }
       }
     }
   }
@@ -340,9 +401,9 @@ body {
   div.page--three,
   div.page--six {
     scroll-snap-align: start;
-
     width: 90%;
     padding: 10vh 2vw;
+    padding-top: 10rem;
     position: relative;
     h2 {
       font-weight: 600;
@@ -354,14 +415,7 @@ body {
       span {
         font-weight: 300;
         color: rgba(255, 255, 255, 0.671);
-        margin: 0 25px;
       }
-    }
-    hr.vertical-hr {
-      @include vertical-hr();
-      position: absolute;
-      top: 90px;
-      left: 138px;
     }
     section.video--list {
       &::-webkit-scrollbar {
@@ -420,13 +474,7 @@ body {
 
   div.page--four {
     scroll-snap-align: start;
-
-    section.page--right {
-      hr.vertical-hr {
-        position: absolute;
-        left: 150px;
-      }
-    }
+    padding-top: 10rem;
   }
 
   section.divider--hero {
@@ -457,6 +505,7 @@ body {
     scroll-snap-align: start;
     width: 90%;
     padding: 10vh 2vw;
+    padding-top: 10rem;
     position: relative;
     h2 {
       font-weight: 600;
@@ -468,14 +517,7 @@ body {
       span {
         font-weight: 300;
         color: rgba(255, 255, 255, 0.671);
-        margin: 0 25px;
       }
-    }
-    hr.vertical-hr {
-      @include vertical-hr();
-      position: absolute;
-      top: 90px;
-      left: 138px;
     }
     section.video--list {
       &::-webkit-scrollbar {
@@ -536,10 +578,6 @@ body {
 
   // ############# Uncommon properties for page six
   div.page--six {
-    hr.vertical-hr {
-      @include vertical-hr();
-      left: 167px;
-    }
     section.video--list {
       article {
         a {

@@ -9,17 +9,19 @@
   <!-- Navigation bar -->
   <nav class="nav--hero">
     <ul class="left--list">
-      <li>HOME</li>
-      <li>ABOUT</li>
-      <li>GALLERY</li>
-      <li>ACTORS</li>
+      <a href="#home">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#gallery">GALLERY</a>
+      <a href="#actors">ACTORS</a>
     </ul>
-    <img src="Media/logos_netflix.png" alt="" class="logo" />
+    <a href="https://www.netflix.com/in/title/80192098" target="_blank"
+      ><img src="Media/logos_netflix.png" alt="" class="logo"
+    /></a>
     <ul class="right--list">
-      <li>BTS</li>
-      <li>SEASONS</li>
-      <li>REVIEWS</li>
-      <li>CODE</li>
+      <a href="#director">DIRECTOR</a>
+      <a href="#seasons">SEASONS</a>
+      <a href="#reviews" class="reviews">REVIEWS</a>
+      <a href="https://github.com/geekvinay/Money-Heist">CODE</a>
     </ul>
     <a href="#"><i class="fas fa-bars"></i></a>
     <hr />
@@ -37,8 +39,25 @@
         <div class="loading--inside"></div>
       </div>
     </section>
+
+    <!-- Review Modal Page -->
+    <section class="review--hero">
+      <i class="fas fa-window-close"></i>
+      <h1>Hey there, Please enter your message</h1>
+      <form action="" target="_blank" method="post">
+        <input type="email" name="email" id="email" placeholder="Email " />
+        <input type="text" name="name" id="name" placeholder="Name" />
+        <textarea id="message" name="message" rows="6" cols="40">
+Please enter your message here.....
+        </textarea>
+        <div class="wrapper">
+          <input type="reset" class="buttons" value="reset" />
+          <input type="submit" class="buttons" value="submit" />
+        </div>
+      </form>
+    </section>
     <!-- The Home page -->
-    <div class="page--one">
+    <div id="home" class="page--one">
       <h1>MONEY</h1>
       <h1 id="main">HEIST</h1>
       <p class="sticker">BELLA CIAO</p>
@@ -51,11 +70,10 @@
     </div>
 
     <!-- The About section starts here -->
-    <div class="page--two">
+    <div id="about" class="page--two">
       <img src="Media/About.png" alt="" draggable="false" />
       <section class="page--right">
-        <h2>ABOUT <span>MONEY HEIST</span></h2>
-        <hr class="vertical-hr" />
+        <h2>ABOUT <span>| MONEY HEIST</span></h2>
         <p>
           Eight thieves take hostages and lock themselves in the Royal Mint of
           Spain as a criminal mastermind manipulates the police to carry out his
@@ -68,24 +86,23 @@
 
         <article class="list--villian">
           <i class="fab fa-imdb"></i>
-          <span>8.2/10</span>
-          <hr />
-          <span>2017</span>
-          <hr />
-          <span>18+</span>
-          <hr />
-          <span>5 Seasons</span>
-          <hr />
+          <span>8.2/10 </span>
+          <span>|</span>
+          <span>2017 </span>
+          <span>|</span>
+          <span>18+ </span>
+          <span>|</span>
+          <span>5 Seasons </span>
+          <span>|</span>
           <span>TV Thrillers</span>
         </article>
       </section>
     </div>
 
     <!-- List of videos -->
-    <div class="page--three">
+    <div id="gallery" class="page--three">
       <section class="fader"></section>
-      <h2>VIDEOS <span>MONEY HEIST</span></h2>
-      <hr class="vertical-hr" />
+      <h2>VIDEOS <span>| MONEY HEIST</span></h2>
       <section class="video--list" id="scroll">
         <article class="part5">
           <img src="Media/part5_2.jpg" alt="" />
@@ -116,10 +133,9 @@
     </section>
 
     <!-- About the Director -->
-    <div class="page--two page--four">
+    <div id="director" class="page--two page--four">
       <section class="page--right">
-        <h2>DIRECTOR <span>MONEY HEIST</span></h2>
-        <hr class="vertical-hr" />
+        <h2>DIRECTOR <span>| MONEY HEIST</span></h2>
         <p>
           Álex Pina (Pamplona) is a television producer, writer, series creator,
           scriptwriter and Spanish film director, known recently for his global
@@ -138,10 +154,9 @@
     </section>
 
     <!-- List of actors -->
-    <div class="page--five">
+    <div id="actors" class="page--five">
       <section class="fader"></section>
-      <h2>ACTORS <span>MONEY HEIST</span></h2>
-      <hr class="vertical-hr" />
+      <h2>ACTORS <span>| MONEY HEIST</span></h2>
       <section class="video--list" id="scroll">
         <article class="part5">
           <img src="Media/Professor.png" alt="" />
@@ -171,10 +186,9 @@
     </div>
 
     <!-- List of videos -->
-    <div class="page--six">
+    <div id="seasons" class="page--six">
       <section class="fader"></section>
-      <h2>SEASONS <span>MONEY HEIST</span></h2>
-      <hr class="vertical-hr" />
+      <h2>SEASONS<span>| MONEY HEIST</span></h2>
       <section class="video--list" id="scroll">
         <article class="part5">
           <img src="Media/part5_2.jpg" alt="" />
