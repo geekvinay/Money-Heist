@@ -54,6 +54,24 @@ a:visited {
   color: white;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
+a button:hover {
+  cursor: pointer;
+}
+
+span.highlight {
+  color: #db202c;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+span.highlight:hover {
+  cursor: pointer;
+}
+
 nav.nav--hero {
   width: 100vw;
   height: 100px;
@@ -113,6 +131,16 @@ nav.nav--hero a:hover {
   cursor: pointer;
 }
 
+nav.nav--hero a.fa-twitter i.fa-twitter {
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  font-size: 2rem;
+}
+
+nav.nav--hero a.fa-twitter i.fa-twitter:hover {
+  color: #023dff;
+}
+
 nav.nav--hero hr {
   border: none;
   border-top: 2px solid #ffffff13;
@@ -123,10 +151,6 @@ nav.nav--hero hr {
   position: sticky;
   width: 100%;
   position: absolute;
-}
-
-nav.nav--hero i {
-  display: none;
 }
 
 body.overflow--scroll {
@@ -686,7 +710,7 @@ body section.divider--hero button {
 body div.page--five {
   scroll-snap-align: start;
   width: 90%;
-  padding: 10vh 2vw;
+  padding: 200px 2vw;
   padding-top: 10rem;
   position: relative;
 }

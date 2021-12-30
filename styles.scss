@@ -74,6 +74,24 @@ a {
   &:visited {
     color: white;
   }
+  &:hover {
+    cursor: pointer;
+  }
+
+  button {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+span.highlight {
+  color: #db202c;
+  text-decoration: underline;
+  font-weight: 600;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 // Navigation bar
@@ -114,6 +132,15 @@ nav.nav--hero {
       cursor: pointer;
     }
   }
+  a.fa-twitter {
+    i.fa-twitter {
+      transition: all 0.6s ease;
+      font-size: 2rem;
+      &:hover {
+        color: rgb(2, 61, 255);
+      }
+    }
+  }
   hr {
     border: none;
     border-top: 2px solid #ffffff13;
@@ -123,9 +150,6 @@ nav.nav--hero {
     position: sticky;
     width: 100%;
     position: absolute;
-  }
-  i {
-    display: none;
   }
 }
 
@@ -504,7 +528,7 @@ body {
   div.page--five {
     scroll-snap-align: start;
     width: 90%;
-    padding: 10vh 2vw;
+    padding: 200px 2vw;
     padding-top: 10rem;
     position: relative;
     h2 {
