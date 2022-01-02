@@ -7,7 +7,7 @@ let body = document.querySelector("body");
 let reviews = document.querySelector(".reviews");
 let reviewsModal = document.querySelector(".review--hero");
 let reviewsClose = document.querySelector(".fa-window-close");
-let screenwidth = window.innerWidth;
+let screenwidth = screen.innerWidth;
 console.log(screenwidth);
 
 reviews.addEventListener('click', function () {
@@ -28,7 +28,7 @@ window.addEventListener('load', () => {
         // body.classList.add = "overflow--scroll";
 
 
-        if (screenwidth < 800) {
+        if (screenwidth < 1000) {
             body.style.width = "100vw";
             body.style.height = "100vh";
             body.style.overflowY = "hidden";
