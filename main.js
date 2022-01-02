@@ -7,7 +7,7 @@ let body = document.querySelector("body");
 let reviews = document.querySelector(".reviews");
 let reviewsModal = document.querySelector(".review--hero");
 let reviewsClose = document.querySelector(".fa-window-close");
-let screenwidth = screen.innerWidth;
+let screenwidth = window.innerWidth;
 console.log(screenwidth);
 
 reviews.addEventListener('click', function () {
